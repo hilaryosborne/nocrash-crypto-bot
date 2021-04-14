@@ -1,1 +1,1 @@
-# nocrash-crypto-bot
+# nocrash-crypto-bot <> great name btw :)
