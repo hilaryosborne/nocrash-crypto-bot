@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.build.json",
+  "compilerOptions": {
+    "outDir": "./lib",
+    "declarationDir": "./lib",
+    "rootDir": "./src",
+    "paths": {
+      "@bitsy-ui/bootstrap/lib/*": ["../bitsy-ui-bootstrap/src/*"]
+    }
+  },
+  "include": [
+    "./src"
+  ],
+  "exclude": ["node_modules", "lib", "**/*.test.*"],
+  "references": [{ "@bitsy-ui/bootstrap": "../bitsy-ui-bootstrap" }]
+}

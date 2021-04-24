@@ -1,0 +1,13 @@
+# editors
+.idea
+
+# development
+sandbox
+
+# dependencies
+/node_modules
+
+# misc
+.DS_Store
+/flow-coverage
+/npm-debug.log*

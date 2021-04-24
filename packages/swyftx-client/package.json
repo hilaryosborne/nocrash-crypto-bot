@@ -1,0 +1,21 @@
+{
+  "name": "@crypto/swyftx-client",
+  "version": "0.1.4",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "license": "MIT",
+  "directories": {
+    "lib": "lib",
+    "src": "src"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "rimraf lib && yarn run build:js && yarn run build:ts",
+    "build:ts": "tsc --project tsconfig.build.json",
+    "build:js": "BABEL_ENV=build babel --root-mode upward src --out-dir lib --extensions .ts,.tsx --no-comments && tsc --project ./tsconfig.json",
+    "deploy": "yarn run build && npm unpublish --force --registry http://localhost:4873 @bitsy-ui/core && npm publish --registry http://localhost:4873"
+  },
+  "dependencies": {}
+}
